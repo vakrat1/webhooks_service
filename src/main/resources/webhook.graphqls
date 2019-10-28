@@ -1,0 +1,78 @@
+#
+# Schemas must have at least a query root type
+#
+#schema {
+#    query: Query
+#    subscription : Subscription
+#}
+
+type Query {
+   # post(id: ID!): Post
+
+   getWebHook(id: String!): WebHookOutput
+
+   getAllWebHooks:[WebHookOutput!]!
+}
+
+type Mutation {
+    #createPost(text:String):Post
+    registerWebHook(webHookInput: WebHookInput): WebHookOutput
+
+    # Update Webhook data by uid and return true when Webhook updated successfully
+    updateWebHook(uid:￿ String!, webHookInput: WebHookInput!): Boolean!
+
+    # Delete a webhook by uid and return true when webhook deleted successfully
+    deleteWebhook(uid: String!): Boolean!
+}
+
+type Subscription {
+    stockQuotes(stockCodes:[String]) : StockPriceUpdate!
+
+    ticketUpdates: TicketNotification!
+}
+
+#type Post {
+#    id: ID!
+#    text: String
+#    comments: [Comment!]!
+#}
+
+#type Comment {
+#    id: ID!
+#    description: String!
+#}
+
+type StockPriceUpdate {
+    dateTime : String
+    stockCode : String
+    stockPrice : Float
+    stockPriceChange : Float
+}
+
+type TicketNotification{
+    ticketId: String
+    dateTime: String
+    eventType: EventType
+    payload: String
+}
+
+
+input WebHookInput{
+    name: String!
+    eventType: EventType!
+    url: String!
+
+}
+
+type WebHookOutput{
+    id: String!
+    name: String!
+    url: String!
+}
+
+enum ￿EventType {
+    ALL
+	CREATED
+	UPDATED
+	DELETED
+}
