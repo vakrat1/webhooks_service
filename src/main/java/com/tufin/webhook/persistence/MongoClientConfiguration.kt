@@ -30,9 +30,9 @@ class MongoClientConfiguration(
     @Value("\${mongodb.host:localhost}") private val host: String,
     @Value("\${mongodb.port:27017}") private val port: Int,
     @Value("\${mongodb.database:webhooks_service_db}") private val database: String,
-    @Value("\${mongodb.maxConnections:10}") private val maxConnections: Int,
+    @Value("\${mongodb.maxConnections:10}") private val maxConnections: Int/*,
     @Value("\${mongodb.username:yaniv}") private val username: String,
-    @Value("\${mongodb.password:yaniv}") private val password: String
+    @Value("\${mongodb.password:yaniv}") private val password: String*/
 ) {
 
     private val executorService = Executors.newScheduledThreadPool(
@@ -86,7 +86,7 @@ class MongoClientConfiguration(
                         CodecRegistries.fromProviders(PojoCodecProvider.builder().automatic(true).build())
                     )
                 )
-                .credential(MongoCredential.createScramSha1Credential(username, database, password.toCharArray()))
+//                .credential(MongoCredential.createScramSha1Credential(username, database, password.toCharArray()))
                 .build()
 
         val mongoClient = MongoClients.create(settings)

@@ -53,6 +53,12 @@ sourceCompatibility = 1.8
 
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.keycloak/keycloak-spring-boot-starter
+    compile ("org.keycloak:keycloak-spring-boot-2-starter:4.0.0.Final")
+    compile ("org.springframework.boot:spring-boot-starter-security")
+
+
+
 //    compile "com.graphql-java-kickstart:graphql-java-servlet:$LIB_GRAPHQL_SERVLET_VER"
     implementation("com.graphql-java-kickstart:graphql-java-tools:$LIB_GRAPHQL_JAVA_TOOLS_VER")
     implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:$LIB_GRAPHQL_JAVA_TOOLS_VER") {
@@ -64,6 +70,8 @@ dependencies {
     implementation("com.atlassian.braid:graphql-braid:0.22.0")
 
     implementation("org.springframework.boot:spring-boot-starter-web:$LIB_SPRING_BOOT_VER")
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.2.0.RELEASE'
 
     compile "io.projectreactor:reactor-core:3.2.11.RELEASE"
 
@@ -87,6 +95,13 @@ dependencies {
 //    compile "io.reactivex.rxjava2:rxjava:2.1.5"
 
 }
+
+dependencyManagement {
+    imports {
+        mavenBom ("org.keycloak.bom:keycloak-adapter-bom:4.0.0.Final")
+    }
+}
+
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"

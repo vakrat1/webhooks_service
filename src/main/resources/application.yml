@@ -12,6 +12,9 @@ graphql:
     subscriptions:
       websocket:
         path: /subscriptions
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
 
 logging:
   level:
@@ -21,3 +24,14 @@ logging:
           graphql:
             boot:
               error: debug
+
+keycloak:
+  auth-server-url: http://localhost:8081/auth
+  realm: flinckr_realm
+  resource: flinckr_backend
+  public-client: true
+  principal-attribute: preferred_username
+#  security-constraints[0]:
+#    authRoles[0]: admin_user
+#    securityCollections[0]:
+#      patterns[0]: /graphq/*

@@ -19,6 +19,17 @@
           <option name="userDatabase" value="webhooks_service_db" />
           <option name="username" value="yaniv" />
         </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="label" value="local_docker_db" />
+          <option name="serverUrls">
+            <list>
+              <option value="localhost:27017" />
+            </list>
+          </option>
+          <option name="sshTunnelingConfiguration">
+            <SshTunnelingConfiguration />
+          </option>
+        </ServerConfiguration>
       </list>
     </option>
   </component>
