@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a8aa361-699a-4f8f-a860-7dc6ce6e8318" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tufin/webhook/controllers/Customer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tufin/webhook/controllers/WebController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tufin/webhook/security/SecurityConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/external.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mongoSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tufin/webhook/persistence/MongoClientConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tufin/webhook/persistence/MongoClientConfiguration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tufin/webhook/security/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tufin/webhook/security/SecurityConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -171,7 +162,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SubscriptionSampleApplication">
+  <component name="RunManager" selected="Application.NatsPublisher">
     <configuration name="NatsPublisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tufin.webhook.nats.NatsPublisher" />
       <module name="webhooks_service.test" />
@@ -342,7 +333,7 @@
       <workItem from="1569272499309" duration="15914000" />
       <workItem from="1570725325502" duration="19424000" />
       <workItem from="1571391433682" duration="1651000" />
-      <workItem from="1572277093201" duration="17670000" />
+      <workItem from="1572277093201" duration="24399000" />
     </task>
     <servers />
   </component>

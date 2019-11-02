@@ -56,11 +56,12 @@ internal class SecurityConfig : KeycloakWebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         super.configure(http)
         http.csrf().disable()
-                .authorizeRequests()
-                .anyRequest().authenticated()
+//                .authorizeRequests()
+//                .anyRequest().authenticated()
 //        super.configure(http)
-//        http.authorizeRequests()
-//                .antMatchers("/subscriptions*", "/customers*", "/graphql*", "/graphiql*").hasRole("Admin_Role") // only user with role user are allowed to access
+        http.authorizeRequests()
+                .antMatchers("/subscriptions*", "/customers*", "/graphql*", "/graphiql*").hasRole("Admin_Role") // only user with role user are allowed to access
+//                .antMatchers("/").permitAll()
 //                .anyRequest().permitAll()
     }
 }
